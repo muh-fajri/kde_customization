@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="./jq_tab.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>KDE Customization</title>
+</head>
+<body>
+    <div class="container-fluid">
+    <div id="toTop" onclick="gotoTop()">UP</div>
+    <script src="./script.js"></script>
+    <div class="header-board">
+        <header>
+            <h1>KDE Customization</h1>
+            <p>This customization is applied to KDE Plasma 5 Desktop Environment on Linux Operating system. All Linux distributions that using KDE Plasma 5 such as Ubuntu/Debian, Manjaro/Arch, Fedora, OpenSUSE, etc. could be done through this page step-by-step until finished. As the initial support, I show you the result set of my desktop as you can see on the picture.</p>
+            <p>Special thanks to Linux Scoop cause has providing video tutorial about this customization.</p>
+            <p class="special-thank">
+                Visit his YouTube channel on :
+                <a href="https://www.youtube.com/linuxscoop">Linux Scoop</a>
+            </p>
+        </header>
+        <div class="big-header">
+            <img src="./KDE_Plasma.png" alt="KDE_Plasma">
+        </div>
+    </div>
+    <div class="heading-text">
+        <h3>Note :</h3>
+        <p>All of the customization setup done by System Settings window, Terminal commands, Browser's engine, File Manager window, and Desktop view.</p>
+        <p>All of the steps are shown by a picture. So beware everything you seen on the picture.</p>
+        <p>All of the pictures that you will see are the final result. But don't worry, you can still follow each instruction that are provided.</p>
+    </div>
+    <main>
+        <div class="left-sidebar">
+            <div class="content-sidebar">
+                <a href="javascript:void(0)" name="initial" class="active">Initial Setup</a>
+                <a href="javascript:void(0)" name="theme" class="inactive">Install Global Theme and GTK2/GTK3 Themes</a>
+                <a href="javascript:void(0)" name="icon" class="inactive">Install Icon, Cursor, and Font</a>
+                <a href="javascript:void(0)" name="kvantum" class="inactive">Install and Configure Kvantum Theme</a>
+                <a href="javascript:void(0)" name="plasmoids" class="inactive">Install Plasmoids Widget</a>
+                <a href="javascript:void(0)" name="latte" class="inactive">Setup Latte-Dock and Add Plasmoids Widget</a>
+                <a href="javascript:void(0)" name="login_lock" class="inactive">Setup Login/Lock Screen</a>
+                <a href="javascript:void(0)" name="additional" class="inactive">Additional Setup</a>
+            </div>
+        </div>
+        <article>
+            <div class="content">
+                <section name="initial" class="feature">
+                    <h3>Initial Setup</h3>
+                    <p>Open System Settings in the Start Menu.</p>
+                    <p>Window Management > Windows Behavior > Advanced</p>
+                    <img src="./wm_1_wb.png" alt="window-behavior">
+                    <p>Workspace Behavior > Desktop Effects</p>
+                    <img src="./wb_1_deff.png" alt="desktop-effects-blur">
+                    <img src="./wb_2_deff.png" alt="desktop-effects-slide-back">
+                    <img src="./wb_3_deff.png" alt="desktop-effects-dialog">
+                    <img src="./wb_4_deff.png" alt="desktop-effects-dim-screen">
+                    <p>Workspace Behavior > Screen Edges</p>
+                    <img src="./wb_5_edge.png" alt="workspace-behavior-screen-edges">
+                    <p>Window Management > Task Switcher</p>
+                    <img src="./wm_2_ts.png" alt="window-management-task-switcher">
+                    <p>Window Management > Kwin Scripts</p>
+                    <p>Force Blur, Latte Windows Colors&nbsp;&nbsp;<span class="notice" >* Install from this window (Get New Scripts...)</span></p>
+                    <img src="./wm_3_ks.png" alt="kwin-scripts">
+                    <p>Application Style > Window Decorations > Titlebar Buttons</p>
+                    <img src="./apst_1_wd_tb.png" alt="titlebar-buttons">
+                    <p>Workspace Behavior > Virtual Desktops</p>
+                    <img src="./wb_6_vird.png" alt="virtual-desktop">
+                </section>
+                <section name="theme" class="feature">
+                    <h3>Install Global Theme and GTK2/GTK3 Themes</h3>
+                    <p>Global Theme&nbsp;&nbsp;<span class="notice" >* Install from this window (Get New Global Themes...)</span> or <span class="notice-optional">download from the resources section instead</span></p>
+                    <img src="./gth_1.png" alt="global-theme">
+                    <p>Qogir-Theme&nbsp;&nbsp;<span class="notice-optional" >* Download from the resources section instead</span></p>
+                    <code>
+                        cd ~/Downloads<br>
+                        git clone https://github.com/vinceliuice/Qogir-theme.git<br>
+                        cd Qogir-theme<br>
+                        ./install.sh
+                    </code>
+                    <p>Application Style > Application Style</p>
+                    <img src="./apst_2_apst.png" alt="gtk-theme">
+                </section>
+                <section name="icon" class="feature">
+                    <h3>Install Icon, Cursor, and Font</h3>
+                    <p>Icons&nbsp;&nbsp;<span class="notice" >* Install from this window (Get New Icons...)</span> or <span class="notice-optional">download from the resources section instead</span></p>
+                    <code>
+                        cd ~/Downloads<br>
+                        git clone https://github.com/vinceliuice/Tela-circle-icon-theme.git<br>
+                        cd Tela-circle-icon-theme<br>
+                        ./install.sh
+                    </code>
+                    <img src="./icons_1.png" alt="icon">
+                    <p>Cursors&nbsp;&nbsp;<span class="notice" >* Install from this window (Get New Cursors...)</span> or <span class="notice-optional">download from the resources section instead</span></p>
+                    <img src="./cursors_1.png" alt="cursor">
+                    <p>Fonts&nbsp;&nbsp;<span class="notice-optional">* Download from the resources section instead</span></p>
+                    <p class="link">https://fonts.google.com/specimen/Roboto</p>
+                    <p>Dolphin</p>
+                    <code>/home/&lt;nama_user&gt;/.local/share/fonts/</code>
+                    <img src="./dolphin_fonts.png" alt="font-directory">
+                    <p>Fonts > Adjust All Fonts...</p>
+                    <img src="./fonts_1.png" alt="font-settings">
+                </section>
+                <section name="kvantum" class="feature">
+                    <h3>Install and Configure Kvantum Theme</h3>
+                    <p><span class="notice-optional">* See the resources section for other distributions</span></p>
+                    <p>Ubuntu and Derivatives</p>
+                    <code>
+                        sudo add-apt-repository ppa:papirus/papirus <br>
+                        sudo apt-get update <br>
+                        sudo apt install qt5-style-kvantum qt5-style-kvantum-themes
+                    </code>
+                    <p>* To remove ppa repository, use command :<p>
+                    <code>sudo add-apt-repository --remove ppa:&lt;ppa_repository&gt;</code>
+                    <p>Arch and Derivatives</p>
+                    <code>sudo pacman -S kvantum-qt5</code>
+                    <p>Download Edna&nbsp;&nbsp;<span class="notice-optional">* Download from the resources section instead</span></p>
+                    <p class="link">https://www.pling.com/p/1367055</p>
+                    <p>Kvantum Manager > Select a Kvantum theme folder > Install this theme</p>
+                    <img src="./kvantum_1.png" alt="kvantum-select-folder">
+                    <p>Kvantum Manager > Change/Delete Theme > Select a theme > Use this theme</p>
+                    <img src="./kvantum_2.png" alt="kvantum-select-theme">
+                    <p>Application Style > Application Style > kvantum-dark</p>
+                    <img src="./apst_3_apst.png" alt="application-style-kvantum">
+                </section>
+                <section name="plasmoids" class="feature">
+                    <h3>Install Plasmoids Widget</h3>
+                    <p>Right click Desktop > Add Widgets... > Get New Widgets... > Download New Plasma Widgets&nbsp;&nbsp;<span class="notice" >* Install from this window</span></p>
+                    <p>Latte Separator, Latte SideBar Button, Latte Spacer</p>
+                    <img src="./widget_1_latte.png" alt="latte-widget">
+                    <p>Window Title Applet</p>
+                    <img src="./widget_2_title.png" alt="window-title-widget">
+                    <p>Better Inline Clock</p>
+                    <img src="./widget_3_clock.png" alt="inline-clock-widget">
+                    <p>Simple Menu</p>
+                    <img src="./widget_4_menu.png" alt="simple-menu-widget">
+                    <p>Fancy Clock</p>
+                    <img src="./widget_5_fancy_clock.png" alt="fancy-clock-widget">
+                    <p>virtual-desktop-bar&nbsp;&nbsp;<span class="notice-optional" >* Download from the resources section instead</span></p>
+                    <code>
+                        cd ~/Downloads<br>
+                        git clone https://github.com/wsdfhjxc/virtual-desktop-bar.git<br>
+                        cd virtual-desktop-bar<br>
+                        ./scripts/install-dependencies-ubuntu.sh<br>
+                        ./scripts/build-applet.sh<br>
+                        ./scripts/install-applet.sh
+                    </code>
+                </section>
+                <section name="latte" class="feature">
+                    <h3>Setup Latte-Dock and Add Plasmoids Widget</h3>
+                    <p>Install Latte-Dock&nbsp;&nbsp;<span class="notice-optional">* Download from the resources section instead</span></p>
+                    <p>Arch and Derivatives</p>
+                    <code>pamac build latte-dock-git</code>
+                    <p>Ubuntu and Derivatives</p>
+                    <code>
+                        cd ~/Downloads<br>
+                        git clone https://github.com/KDE/latte-dock.git<br>
+                        cd latte-dock<br>
+                        sudo apt install cmake extra-cmake-modules qtdeclarative5-dev libqt5x11extras5-dev libkf5iconthemes-dev libkf5plasma-dev libkf5windowsystem-dev libkf5declarative-dev libkf5xmlgui-dev libkf5activities-dev build-essential libxcb-util-dev libkf5wayland-dev git gettext libkf5archive-dev libkf5notifications-dev libxcb-util0-dev libsm-dev libkf5crash-dev libkf5newstuff-dev libxcb-shape0-dev libxcb-randr0-dev libx11-dev libx11-xcb-dev<br>
+                        sudo apt install kirigami2-dev<br>
+                        ./install.sh<br>
+                    </code>
+                    <p>Edna Layout&nbsp;&nbsp;<span class="notice-optional">* Download from the resources section instead</span></p>
+                    <p class="link">https://www.pling.com/p/1417204</p>
+                    <img src="./latte_dock_1_layout.png" alt="edna-manage-layout">
+                    <p>Settings - Latte Dock > Import...</p>
+                    <img src="./latte_dock_2_import.png" alt="edna-latte-dock-import">
+                    <p>Settings - Latte Dock > Switch</p>
+                    <img src="./latte_dock_3_switch.png" alt="edna-latte-dock-switch">
+                    <p>File Manager (Activate Show Hidden Files)</p>
+                    <p class="link">/home/&lt;nama_user&gt;/.local/share/plasma/plasmoids/</p>
+                    <img src="./latte_2_inline_clock.png" alt="inline-clock-directory">
+                    <p>Edna.layout.latte (Replace org.kde.plasma.chiliclock with the word highlighted in the picture below)</p>
+                    <p class="link">/home/&lt;nama_user&gt;/.config/latte/</p>
+                    <img src="./latte_1_edna_layout.png" alt="inline-clock-edit">
+                    <p>Right click latte-dock on the top side > Edit Dock... > Inline Clock</p>
+                    <img src="./latte_edit_1_clock.png" alt="inline-clock-setup">
+                    <p>Right click latte-dock on the bottom side > Configure Virtual Desktop Bar...</p>
+                    <img src="./configure_virtual_desktop_1.png" alt="configure-virtual-desktop">
+                    <img src="./configure_virtual_desktop_2.png" alt="virtual-desktop-appearance">
+                    <p>Right click default panel (bottom side) > Edit Panel... > Remove Panel</p>
+                    <img src="./remove_default_panel.png" alt="remove-default-panel">
+                    <p>Right click latte dock on the top side > Edit Dock... > Right click once again > Show Alternatives</p>
+                    <img src="./menu_alternatives_1.png" alt="menu-alternative">
+                    <img src="./menu_alternatives_2.png" alt="select-simple-menu-alternative">
+                    <p>Configure Simple Menu</p>
+                    <img src="./configure_simple_menu_1.png" alt="configure-simple-menu">
+                    <img src="./configure_simple_menu_2.png" alt="simple-menu-select-icon">
+                    <img src="./configure_simple_menu_3.png" alt="simple-menu-icon-selected">
+                    <p>Configure Window Title</p>
+                    <img src="./configure_window_title_1.png" alt="configure-window-title">
+                    <img src="./configure_window_title_2.png" alt="window-title-behavior">
+                    <p>Configure Better Inline Clock</p>
+                    <img src="./configure_inline_clock_1.png" alt="configure-inline-clock">
+                    <img src="./configure_inline_clock_2.png" alt="inline-clock-appearance">
+                    <img src="./configure_inline_clock_3.png" alt="inline-clock-calendar">
+                    <p>Fancy Clock Widget</p>
+                    <p>Install LG Weather_Z font&nbsp;&nbsp;<span class="notice-optional">* Download from the resources section</span></p>
+                    <img src="./configure_fancy_clock_1.png" alt="configure-fancy-clock">
+                    <img src="./configure_fancy_clock_2.png" alt="fancy-clock-font">
+                    <img src="./configure_fancy_clock_3.png" alt="fancy-clock-font-selected">
+                    <p>Simple Weather Widget</p>
+                    <p>Right click Desktop > Add Widgets... > Get New Widgets... > Download New Plasma Widgets </p>
+                    <p>* If an error occured, install plasma-widget-addons and perform restarting firstly</p>
+                    <code>sudo apt install plasma-widgets-addons</code>
+                    <img src="./configure_simple_weather_1.png" alt="configure-simple-weather">
+                    <img src="./configure_simple_weather_2.png" alt="simple-weather-general-settings">
+                    <img src="./configure_simple_weather_3.png" alt="simple-weather-search-location">
+                    <img src="./configure_simple_weather_4.png" alt="simple-weather-general-settings-all">
+                    <p>Install Panon (Audio Spectrum Analyzer)&nbsp;&nbsp;<span class="notice-optional">* Download from the resources section instead</span></p>
+                    <p class="link">https://www.pling.com/p/1326546</p>
+                    <p>Arch and Derivatives</p>
+                    <code>sudo pacman -S qt5-websockets python-docopt python-numpy python-pillow python-pyaudio python-cffi python-websockets</code>
+                    <p>Ubuntu and KDE neon</p>
+                    <code>sudo apt-get install qml-module-qt-websockets python3-docopt python3-numpy python3-pyaudio python3-cffi python3-websockets</code>
+                    <p>Widget Panon</p>
+                    <img src="./configure_panon_1.png" alt="configure-panon">
+                    <img src="./configure_panon_2.png" alt="panon-backend">
+                    <img src="./configure_panon_3.png" alt="panon-visual-effects">
+                    <img src="./configure_panon_4.png" alt="panon-remove-background">
+                </section>
+                <section name="login_lock" class="feature">
+                    <h3>Setup Login/Lock Screen</h3>
+                    <p>Startup and Shutdown > Login Screen (SDDM)&nbsp;&nbsp;<span class="notice" >* Install from this window</span> or <span class="notice-optional">download from the resources section instead</span></p>
+                    <img src="./stsh_1_lsc.png" alt="login-screen-wddm">
+                    <p>Login Screen Background&nbsp;&nbsp;<span class="notice-optional">* Download from the resources section</span></p>
+                    <img src="./stsh_2_lsc.png" alt="login-screen-bg">
+                    <img src="./stsh_3_lsc.png" alt="login-screen-bg-select">
+                    <p>Workspace Behavior > Screen Locking</p>
+                    <img src="./wb_7_sclc.png" alt="screen-locking">
+                    <p>Screen Locking Wallpaper&nbsp;&nbsp;<span class="notice-optional">* Download from the resources section</span></p>
+                    <img src="./wb_8_sclc.png" alt="screen-locking-wallpaper">
+                </section>
+                <section name="additional" class="feature">
+                    <h3>Additional Setup</h3>
+                    <p>Ulauncher&nbsp;&nbsp;<span class="notice-optional">* Download from the resources section instead</span></p>
+                    <p>Arch and Derivatives</p>
+                    <code>pamac build ulauncher</code>
+                    <p>Ubuntu and Derivatives</p>
+                    <code>
+                        sudo apt-add-repository ppa:agornostal/ulauncher<br>
+                        cd ~/Downloads<br>
+                        sudo apt install ./ulauncher_5.10.0_all.deb
+                    </code>
+                    <p>Konsole</p>
+                    <p>Settings > Configure Konsole...</p>
+                    <img src="./configure_konsole_1.png" alt="configure-konsole">
+                    <img src="./configure_konsole_2.png" alt="konsole-profiles">
+                    <img src="./configure_konsole_3.png" alt="konsole-appearance">
+                    <p>Konsole Color Schme & Font&nbsp;&nbsp;<span class="notice" >* Install from this window</span> or <span class="notice-optional">download from the resources section instead</span></p>
+                    <img src="./configure_konsole_4.png" alt="konsole-theme-install">
+                    <img src="./configure_konsole_5.png" alt="konsole-theme-select">
+                    <img src="./configure_konsole_6.png" alt="konsole-theme-select-default">
+                    <p>After the configuration has finished, restarting Konsole</p>
+                    <img src="./configure_konsole_7.png" alt="konsole-theme-test">
+                    <p>Mozilla Firefox</p>
+                    <p>Menu > Preferences > Home</p>
+                    <img src="./configure_mozilla_1.png" alt="mozilla-preferences-home">
+                    <p>Menu > Customize...</p>
+                    <img src="./configure_mozilla_2.png" alt="mozilla-customize">
+                </section>
+            </div>
+        </article>
+        <aside>
+            <section class="right-feature">
+                <div class="right-feature-heading">
+                    <h4>Credits</h4>
+                </div>
+                <ul>
+                    <li>vinceliuice on Github</li>
+                    <li>Google Fonts</li>
+                    <li>Pling</li>
+                    <li>wsdfhjxc on Github</li>
+                    <li>AUR (Arch User Repository)</li>
+                    <li>KDE on Github</li>
+                </ul>
+            </section>
+            <section class="right-feature">
+                <div class="right-feature-heading">
+                    <h4>Special Thanks</h4>
+                </div>
+                <p>Linux Scoop</p>
+                <p class="link">https://www.youtube.com/linuxscoop</p>
+                <iframe width="100%" height="250" src="https://www.youtube.com/embed/qTF9Nmt3iXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            <section class="right-feature resources">
+                <div class="right-feature-heading">
+                    <h4>Resources</h4>
+                </div>
+                <div class="resource-content">
+                    <p>Wallpaper</p>
+                    <ul>
+                        <li>https://unsplash.com/photos/JgOeRuGD_Y4</li>
+                        <li>https://unsplash.com/photos/YFFGkE3y4F8</li>
+                        <li>https://unsplash.com/photos/v7daTKlZzaw</li>
+                        <li>https://unsplash.com/photos/T_Qe4QlMIvQ</li>
+                    </ul>
+                </div>
+                <div class="resource-content">
+                    <p>Install Themes</p>
+                    <ul>
+                        <li>Global Theme:<br>https://www.pling.com/p/1367060/ </li>
+                        <li>GTK2/GTK3 Theme:<br>https://github.com/vinceliuice/Qogir-theme.git</li>
+                    </ul>
+                </div>
+                <div class="resource-content">
+                    <p>Install Icon Theme, Cursors Theme, and Font</p>
+                    <ul>
+                        <li>Icon Theme:<br>https://github.com/vinceliuice/Tela-circle-icon-theme.git</li>
+                        <li>Cursors Theme:<br>https://www.pling.com/p/1355701</li>
+                        <li>Font:<br>https://fonts.google.com/specimen/Roboto</li>
+                    </ul>
+                </div>
+                <div class="resource-content">
+                    <p>Install and Configure Kvantum Theme</p>
+                    <ul>
+                        <li>Manjaro/Arch:<br>sudo pacman -S kvantum-qt5</li>
+                        <li>
+                            Ubuntu/Debian:<br>
+                            sudo add-apt-repository ppa:papirus/papirus<br>
+                            sudo apt-get update<br>
+                            sudo apt install qt5-style-kvantum<br>
+                        </li>
+                        <li>OpenSUSE:<br>sudo zypper in kvantum</li>
+                        <li>Fedora:<br>sudo dnf install kvantum</li>
+                        <li>Edna Kvantum Theme:<br>https://www.pling.com/p/1367055</li>
+                    </ul>
+                </div>
+                <div class="resource-content">
+                    <p>Install Plasmoids Widgets</p>
+                    <ul>
+                        <li>Top panel: <br> Simple Menu, Window Title Applet, Better Inline Clock, System Tray, Latte SideBar, Latte Separator</li>
+                        <li>Desktop: <br> Fancy Clock, Simple Weather, Panon (https://www.pling.com/p/1326546)</li>
+                        <li>Bottom: <br> Latte Sidebar Button, Virtual Desktop Bar (https://github.com/wsdfhjxc/virtual-desktop-bar.git)</li>
+                    </ul>
+                </div>
+                <div class="resource-content">
+                    <p>Setup Latte Dock and Add Plasmoids Widget</p>
+                    <ul>
+                        <li>Manjaro/Arch Linux:<br>pamac build latte-dock-git</li>
+                        <li>Other Linux Distribution:<br>https://github.com/KDE/latte-dock.git</li>
+                        <li>
+                            Installation Instruction:<br>
+                            https://github.com/KDE/latte-dock/blob/master/INSTALLATION.md
+                        </li>
+                        <li>Edna Latte Layout:<br>https://www.pling.com/p/1417204</li>
+                        <li>LG Weather_Z Font:<br>https://drive.google.com/drive/folders/1AjLIz0kYS5DuiM9ooXM1D2RegvHlxZBi</li>
+                    </ul>
+                </div>
+                <div class="resource-content">
+                    <p>Setup Login/Lock Screen</p>
+                    <ul>
+                        <li>SDDM Theme:<br>https://www.pling.com/p/1312086/</li>
+                    </ul>
+                </div>
+                <div class="resource-content">
+                    <p>Additional Setup</p>
+                    <ul>
+                        <li>Ulauncher:<br>https://ulauncher.io/</li>
+                        <li>Edna Konsole Theme:<br>https://www.pling.com/p/1367053/</li>
+                    </ul>
+                </div>
+            </section>    
+        </aside>
+    </main>
+    <footer>
+        <section>
+            <h5>Contact :</h5>
+            <a href="https://www.github.com/muh-fajri"><p><span>Github</span>&nbsp;&nbsp;muh-fajri</p></a>
+            <a href="https://www.facebook.com/fajri.codeos"><p><span>Facebook</span>&nbsp;&nbsp;@Fajri.CodeOS</p></a>
+            <a href="https://www.instagram.com/mhd_fajri15"><p><span>Instagram</span>&nbsp;&nbsp;@mhd_fajri15</p></a>
+        </section>
+    </footer>
+</div>
+</body>
+</html>
